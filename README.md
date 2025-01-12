@@ -79,7 +79,7 @@ git clone https://github.com/AxelMardiyo/UKK-Inventaris-Barang.git
 Move into the project directory:
     
 ```bash
-cd sistem-inventaris-barang
+cd UKK-Inventaris-Barang
 ```
 
 ### 2️⃣ Install Backend Dependencies
