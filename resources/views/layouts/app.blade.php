@@ -33,7 +33,8 @@
                 <!-- Form logout -->
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
-                </form>            </div>
+                </form>            
+            </div>
         </div>
         <!-- Page Content -->
         <div id="page-content-wrapper" class="w-100">
