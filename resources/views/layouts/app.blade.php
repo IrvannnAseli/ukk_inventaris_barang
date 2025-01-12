@@ -26,8 +26,14 @@
                 <a href="{{ route('mutasi-lokasi.index') }}" class="list-group-item list-group-item-action">Mutasi Lokasi</a>
                 <a href="{{ route('opname.index') }}" class="list-group-item list-group-item-action">Opname</a>
                 <a href="{{ route('hitung-depresiasi.index') }}" class="list-group-item list-group-item-action">Hitung Depresiasi</a>
-                <a href="{{ route('logout') }}" class="list-group-item list-group-item-action text-danger">Logout</a>
-            </div>
+                <a href="#" class="list-group-item list-group-item-action text-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+                
+                <!-- Form logout -->
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>            </div>
         </div>
         <!-- Page Content -->
         <div id="page-content-wrapper" class="w-100">
