@@ -15,6 +15,7 @@ use App\Http\Controllers\MutasiLokasiController;
 use App\Http\Controllers\KategoriAssetController;
 use App\Http\Controllers\HitungDepresiasiController;
 use App\Http\Controllers\SubKategoriAssetController;
+use App\Http\Controllers\DashboardController;
 
 // Login Routes
 Route::get('/', function () {
@@ -23,6 +24,11 @@ Route::get('/', function () {
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
